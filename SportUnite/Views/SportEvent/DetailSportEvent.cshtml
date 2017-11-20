@@ -1,0 +1,50 @@
+﻿@model SportUnite.WEBUI.Models.ViewModels.DetailSportEventModel
+
+@{
+    Layout = "_Layout";
+    var p = Model;
+}
+
+<div>
+    <h3>Sportevenement informatie:</h3>
+    <div class="">
+        <span><strong>Naam: </strong></span>
+        <span>@p.SportEvent.Name</span>
+    </div>
+    <div class="spacinglines">
+        <span><strong>Prijs: </strong></span>
+        <span>€ @p.SportEvent.Price</span>
+    </div>
+    <div class="spacinglines">
+        <span><strong>Sport: </strong></span>
+        <span>@p.SportEvent.Sport.SportId</span>
+        <span>@p.SportEvent.Sport.Name</span>
+    </div>
+    <div class="spacinglines">
+        <span><strong>Sportcomplex: </strong></span>
+        <span>@p.SportEvent.SportHall.SportComplex.SportComplexId</span>
+        <span>@p.SportEvent.SportHall.SportComplex.Name</span>
+    </div>
+    <div class="spacinglines">
+        <span><strong>Hall: </strong></span>
+        <span>@p.SportEvent.SportHall.SportHallId</span>
+        <span>@p.SportEvent.SportHall.Name</span>
+    </div>
+
+    <div class="spacinglines">
+        <span><strong>Sportcomplex adres: </strong></span>
+        <div>
+            <span>@p.SportEvent.SportHall.SportComplex.Address</span>
+            <span>@p.SportEvent.SportHall.SportComplex.HouseNumber</span>
+        </div>
+        <div>
+            <span>@p.SportEvent.SportHall.SportComplex.City</span>
+        </div>
+        <div>
+            <span>@p.SportEvent.SportHall.SportComplex.PostalCode</span>
+        </div>
+    </div>
+</div>
+<div>
+</div>
+

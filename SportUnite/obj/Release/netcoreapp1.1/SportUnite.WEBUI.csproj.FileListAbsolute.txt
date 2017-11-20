@@ -1,0 +1,16 @@
+C:\Users\Mats\source\repos\SportUniteB1\SportUnite\bin\Release\netcoreapp1.1\SportUnite.WEBUI.deps.json
+C:\Users\Mats\source\repos\SportUniteB1\SportUnite\bin\Release\netcoreapp1.1\SportUnite.WEBUI.runtimeconfig.json
+C:\Users\Mats\source\repos\SportUniteB1\SportUnite\bin\Release\netcoreapp1.1\SportUnite.WEBUI.runtimeconfig.dev.json
+C:\Users\Mats\source\repos\SportUniteB1\SportUnite\obj\Release\netcoreapp1.1\SportUnite.WEBUI.csprojResolveAssemblyReference.cache
+C:\Users\Mats\source\repos\SportUniteB1\SportUnite\obj\Release\netcoreapp1.1\SportUnite.WEBUI.csproj.CoreCompileInputs.cache
+C:\Users\Mats\source\repos\SportUniteB1\SportUnite\obj\Release\netcoreapp1.1\SportUnite.WEBUI.AssemblyInfo.cs
+C:\Users\Mats\source\repos\SportUniteB1\SportUnite\bin\Release\netcoreapp1.1\SportUnite.WEBUI.dll
+C:\Users\Mats\source\repos\SportUniteB1\SportUnite\bin\Release\netcoreapp1.1\SportUnite.WEBUI.pdb
+C:\Users\Mats\source\repos\SportUniteB1\SportUnite\bin\Release\netcoreapp1.1\SportUnite.BLL.dll
+C:\Users\Mats\source\repos\SportUniteB1\SportUnite\bin\Release\netcoreapp1.1\SportUnite.DAL.dll
+C:\Users\Mats\source\repos\SportUniteB1\SportUnite\bin\Release\netcoreapp1.1\SportUnite.Domain.dll
+C:\Users\Mats\source\repos\SportUniteB1\SportUnite\bin\Release\netcoreapp1.1\SportUnite.BLL.pdb
+C:\Users\Mats\source\repos\SportUniteB1\SportUnite\bin\Release\netcoreapp1.1\SportUnite.Domain.pdb
+C:\Users\Mats\source\repos\SportUniteB1\SportUnite\bin\Release\netcoreapp1.1\SportUnite.DAL.pdb
+C:\Users\Mats\source\repos\SportUniteB1\SportUnite\obj\Release\netcoreapp1.1\SportUnite.WEBUI.dll
+C:\Users\Mats\source\repos\SportUniteB1\SportUnite\obj\Release\netcoreapp1.1\SportUnite.WEBUI.pdb

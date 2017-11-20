@@ -1,0 +1,34 @@
+﻿@model SportUnite.WEBUI.Models.ViewModels.LoginModel
+@{
+    ViewBag.Title = "Log In";
+    Layout = "_LayoutHomePage";
+}
+<div class="text-center">
+    <div class="text-center">
+        <div class="panel-heading text-center"><h4>Admin verificatie</h4></div>
+        <form asp-action="Login" asp-controller="Account" method="post" class="form-horizontal">
+            <input type="hidden" asp-for="ReturnUrl" />
+            <div class="panel inputlayout">
+                <div class="text-danger spacing" asp-validation-summary="ModelOnly"></div>
+                <div class="form-group text-center spacing">
+                    <label asp-for="Username" class="control-label col-sm-5"><span class="glyphicon glyphicon-user"></span></label>
+                    <div class="col-sm-3">
+                        <input asp-for="Username" class="form-control" placeholder="gebruikersnaam" />
+                    </div>
+                </div>
+                <div class="form-group text-center">
+                    <label asp-for="Password" class="control-label col-sm-5"><span class="glyphicon glyphicon-lock"></span></label>
+                    <div class="col-sm-3">
+                        <input asp-for="Password" class="form-control" placeholder="wachtwoord" />
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="text-center">
+                    <button class="text-center btn btn-primary buttoncustom" type="submit">Log In</button>
+                </div>
+            </div>
+        </form>
+
+    </div>
+</div>

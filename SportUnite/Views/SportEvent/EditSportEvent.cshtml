@@ -1,0 +1,28 @@
+﻿@model SportUnite.Domain.Models.SportEvent
+@{
+    Layout = "_Layout";
+}
+<form asp-action="EditSportEvent" method="post">
+    <div asp-validation-summary="All"></div>
+    <input type="hidden" asp-for="SportEventId" />
+    <div class="form-group">
+        <label asp-for="Name">Evenement naam:</label>
+        <input asp-for="Name" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Price">Evenement prijs:</label>
+        <textarea asp-for="Price" class="form-control"></textarea>
+    </div>
+    <div class="form-group">
+        <label>Zichtbaarheid</label>
+        <select class="form-control" asp-for="Availability">
+            <option value="">Kies een optie</option>
+            <option value="true">Zichtbaar</option>
+            <option value="false">Onzichtbaar</option>
+        </select>
+    </div>
+    <div class="text-center">
+        <button class="btn btn-primary" type="submit">Opslaan</button>
+        <a asp-action="ListSportEvents" class="btn btn-default">Annuleer</a>
+    </div>
+</form>

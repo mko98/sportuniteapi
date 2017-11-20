@@ -1,0 +1,35 @@
+﻿@model IOrderedEnumerable<bool>
+
+<div class="row">
+    <div>
+        <a class="btn btn-primary addButton pull-right"
+           asp-action="ListSportComplexes"
+           asp-controller="Sportcomplex"
+           asp-route-availability="">
+            <span class="glyphicon glyphicon-sort"></span>
+            Alles
+        </a>
+    </div>
+
+    @foreach (bool? availability in Model)
+    {
+        <div>
+            <a class="btn btn-primary addButton pull-right
+               @(availability == ViewBag.SelectedAvailability ? "btn-primary": "btn-default")"
+               asp-action="ListSportComplexes"
+               asp-controller="Sportcomplex"
+               asp-route-availability="@availability">
+                @if (availability == true)
+                {
+                    <span class="glyphicon glyphicon-ok-sign"></span>
+                    <span>Actief</span>
+                }
+                else
+                {
+                    <span class="glyphicon glyphicon-remove-sign"></span>
+                    <span>Non-actief</span>
+                }
+            </a>
+        </div>
+    }
+</div>

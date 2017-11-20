@@ -1,0 +1,7 @@
+C:\Users\Mats\source\repos\SportUniteB1\SportUnite.Domain\bin\Release\netcoreapp1.1\SportUnite.Domain.deps.json
+C:\Users\Mats\source\repos\SportUniteB1\SportUnite.Domain\bin\Release\netcoreapp1.1\SportUnite.Domain.dll
+C:\Users\Mats\source\repos\SportUniteB1\SportUnite.Domain\bin\Release\netcoreapp1.1\SportUnite.Domain.pdb
+C:\Users\Mats\source\repos\SportUniteB1\SportUnite.Domain\obj\Release\netcoreapp1.1\SportUnite.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Mats\source\repos\SportUniteB1\SportUnite.Domain\obj\Release\netcoreapp1.1\SportUnite.Domain.AssemblyInfo.cs
+C:\Users\Mats\source\repos\SportUniteB1\SportUnite.Domain\obj\Release\netcoreapp1.1\SportUnite.Domain.dll
+C:\Users\Mats\source\repos\SportUniteB1\SportUnite.Domain\obj\Release\netcoreapp1.1\SportUnite.Domain.pdb

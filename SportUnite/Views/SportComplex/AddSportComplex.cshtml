@@ -1,0 +1,40 @@
+﻿@model SportUnite.Domain.Models.SportComplex
+@{
+    Layout = "_Layout";
+}
+<div class="panel panel-head">
+    <div class="panel-heading text-center"><h4>Voeg sport complex toe</h4></div>
+    <div class="panel-body">
+        <form class="p-a-1" asp-action="AddSportComplex" method="post">
+            <div asp-validation-summary="All"></div>
+            <div class="form-group">
+                <label asp-for="Name">Naam sportcomplex</label>
+                <input class="form-control" asp-for="Name" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Address">Adres sportcomplex</label>
+                <input class="form-control" asp-for="Address" />
+            </div>
+            <div class="form-group">
+                <label asp-for="HouseNumber">Huisnummer sportcomplex</label>
+                <input class="form-control" asp-for="HouseNumber" />
+            </div>
+            <div class="form-group">
+                <label asp-for="City">Stad sportcomplex</label>
+                <input class="form-control" asp-for="City" />
+            </div>
+            <div class="form-group">
+                <label asp-for="PostalCode">Postcode sportcomplex</label>
+                <input class="form-control" asp-for="PostalCode" />
+            </div>
+            <div class="text-center">
+                <button class="btn btn-lg btn-primary buttonlayout" id="buttoncustom" type="submit">
+                    Voeg toe
+                </button>
+                <div class="text-center spacing">
+                    <a asp-action="ListSportComplexes" class="btn btn-default">Cancel</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

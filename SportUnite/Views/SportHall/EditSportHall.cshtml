@@ -1,0 +1,32 @@
+﻿@model SportUnite.Domain.Models.SportHall
+@{
+    Layout = "_Layout";
+}
+<form asp-action="EditSportHall" method="post">
+    <div asp-validation-summary="All"></div>
+    <input type="hidden" asp-for="SportHallId" />
+    <div class="form-group">
+        <label asp-for="Name">Sport naam:</label>
+        <input asp-for="Name" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="MinPerson">Minimaal aantal personen:</label>
+        <textarea asp-for="MinPerson" class="form-control"></textarea>
+    </div>
+    <div class="form-group">
+        <label asp-for="MaxPerson">Maximaal aantal personen:</label>
+        <textarea asp-for="MaxPerson" class="form-control"></textarea>
+    </div>
+    <div class="form-group">
+        <label>Zichtbaarheid</label>
+        <select class="form-control" asp-for="Availability">
+            <option value="">Kies een optie</option>
+            <option value="true">Zichtbaar</option>
+            <option value="false">Onzichtbaar</option>
+        </select>
+    </div>
+    <div class="text-center">
+        <button class="btn btn-primary" type="submit">Opslaan</button>
+        <a asp-action="ListSportHalls" class="btn btn-default">Annuleer</a>
+    </div>
+</form>

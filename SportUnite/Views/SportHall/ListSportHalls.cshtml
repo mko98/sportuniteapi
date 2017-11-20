@@ -1,0 +1,49 @@
+﻿@model SportUnite.WEBUI.Models.ViewModels.SportHallFilterListViewModel
+
+@{
+    Layout = "_Layout";
+}
+
+<div>
+    <h2 class="titlelayout" style="float:left">Sporthallen</h2>
+    <a asp-action="AddSportHall" asp-controller="SportHall" class=" btn btn-success addButton pull-right">
+        <span class="glyphicon glyphicon-plus"></span>
+        <h7>Voeg sporthal toe</h7>
+    </a>
+    @await Component.InvokeAsync("SportHallFilter")
+</div>
+
+
+@foreach (var p in Model.SportHall)
+{
+    if (p == null)
+    {
+        <div class="well col-sm-4">
+            <p>
+                Er zijn geen sporthallen!
+            </p>
+        </div>
+
+    }
+    else
+    {
+        <div class="well col-sm-12">
+            <h3>
+                <strong>@p.Name</strong>
+            </h3>
+            <a asp-action="EditSportHall" class="pull-right btn btn-warning"
+               asp-route-sporthallid="@p.SportHallId">
+                <span class="glyphicon glyphicon-pencil"></span>
+                <h7>Edit</h7>
+            </a>
+            <div>
+                <span>Aantal personen: Min. @p.MinPerson - Max. @p.MaxPerson</span>
+            </div>
+        </div>
+
+    }
+}
+<div page-action="List" page-classes-enabled="true"
+     page-class="btn" page-class-normal="btn-default"
+     page-class-selected="btn-primary" class="btn-group pull-right">
+</div>

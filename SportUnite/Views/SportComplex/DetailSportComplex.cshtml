@@ -1,0 +1,54 @@
+﻿@model SportUnite.WEBUI.Models.ViewModels.DetailSportComplexModel
+
+@{
+    Layout = "_Layout";
+    var p = Model;
+}
+
+
+<div>
+    <h3>Sportcomplex informatie:</h3>
+    <div class="spacinglines">
+        <span><strong>Naam Sportcomplex: </strong></span>
+        <span>@p.SportComplex.Name</span>
+    </div>
+    <div class="spacinglines">
+        <span><strong>Sportcomplex adres: </strong></span>
+        
+        <div>
+            <span>@p.SportComplex.Address</span>
+            <span>@p.SportComplex.HouseNumber</span>
+        </div>
+        <div>
+            <span>@p.SportComplex.City</span>
+        </div>
+        <div>
+            <span>@p.SportComplex.PostalCode</span>
+        </div>
+    </div>
+</div>
+
+<div class="spacingbig">
+    <h3>Sportcomplex Hallen:</h3>
+    <table class="table table-bordered">
+        <thead>
+        <tr>
+            <th>Sport ID</th>
+            <th>Sporthall naam</th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var t in Model.SportHalls)
+        {
+            <tr>
+                <td>@t.SportHallId</td>
+                <td>@t.Name</td>
+            </tr>
+
+        }
+        </tbody>
+    </table>
+
+</div>
+ 
+

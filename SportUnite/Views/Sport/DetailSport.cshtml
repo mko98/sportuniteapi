@@ -1,0 +1,36 @@
+﻿@model SportUnite.WEBUI.Models.ViewModels.DetailSportModel
+
+@{
+    Layout = "_Layout";
+    var p = Model;
+}
+
+<div>
+    <div>
+        <span>Sport informatie: </span>
+        <div>
+            <span>Sport naam: </span>
+            <span>@p.Sport.Name</span>
+            
+        </div>
+        <div>
+            <span>Sport beschrijving: </span>
+            <span>@p.Sport.Description</span>
+        </div>
+        
+    </div>
+    <div>
+        <span>Bij behorende Attributen: </span>
+        @foreach (var t in Model.SportAttributes)
+        {
+            <div>
+                <span>@t.SportAttributeId</span>
+                <span>@t.Name</span>
+            </div>
+
+        }
+
+    </div>
+</div>
+
+

@@ -1,0 +1,43 @@
+﻿@using SportUnite.Domain.Models
+@model SportUnite.WEBUI.Models.ViewModels.AddSportEventModel
+@{
+    Layout = "_Layout";
+}
+<div class="panel panel-head">
+    <div class="panel-heading text-center"><h4>Voeg sportevenement toe</h4></div>
+    <div class="panel-body">
+        <form class="p-a-1" asp-action="AddSportEvent" method="post">
+            <div asp-validation-summary="All"></div>
+            <div class="form-group">
+                <label asp-for="SportEvent.Name">Naam Evenement</label>
+                <input class="form-control" asp-for="SportEvent.Name" />
+            </div>
+            <div class="form-group">
+                <label asp-for="SportEvent.Price">Evenement prijs</label>
+                <input class="form-control" asp-for="SportEvent.Price" />
+            </div>
+            <select asp-for="SportId">
+                <option value="">Choose an option</option>
+                @foreach (Sport sport in @Model.Sports)
+                {
+                    <option value=@sport.SportId>@sport.Name</option>
+                }
+            </select>
+            <select asp-for="SportHallId">
+                <option value="">Choose an option</option>
+                @foreach (SportHall sportHall in @Model.SportHalls)
+                {
+                    <option value=@sportHall.SportHallId>@sportHall.Name</option>
+                }
+            </select>
+            <div class="text-center">
+                <button class="btn btn-lg btn-primary buttonlayout" id="buttoncustom" type="submit">
+                    Voeg toe
+                </button>
+                <div class="text-center spacing">
+                    <a asp-action="ListSportEvents" class="btn btn-default">Cancel</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

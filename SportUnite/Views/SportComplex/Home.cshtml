@@ -1,0 +1,40 @@
+﻿@model SportUnite.WEBUI.Models.ViewModels.LoginModel
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - SportUnite</title>
+
+    <environment names="Development">
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="~/css/style.css" />
+        <link rel="stylesheet" href="~/css/site.css" />
+    </environment>
+    <environment names="Staging,Production">
+        <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css"
+              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
+        <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
+    </environment>
+</head>
+<body>
+    <div class="text-center">
+        <div>
+            <img id="logo" src="~/images/logo.png" />
+        </div>
+        <div id="mainpagecontent">
+            <h2 class="inlinespaces">Welkom!</h2>
+            <h5 class="inlinespaces"><strong>Bent u een admin?</strong></h5>
+            <a asp-action="AdminHome" class="text-center btn btn-primary buttoncustom">
+                <h7>Log in als Admin</h7>
+            </a>
+
+            <h5 class="inlinespaces"><strong>Bent u een gebruiker?</strong></h5>
+            <a asp-action="AdminHome" class="text-center btn btn-primary buttoncustom">
+                <h7 >Log in als gebruiker</h7>
+            </a>
+        </div>
+    </div>
+</body>
+</html>

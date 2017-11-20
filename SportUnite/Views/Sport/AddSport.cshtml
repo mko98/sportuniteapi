@@ -1,0 +1,39 @@
+﻿@model SportUnite.Domain.Models.Sport
+@{
+    Layout = "_Layout";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Toevoegen</title>
+    <link rel="stylesheet" type="text/css" href="~/css/Style.css">
+    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.css" />
+</head>
+<body>
+    <div class="panel panel-head">
+        <div class="panel-heading text-center"><h4>Voeg een sport toe</h4></div>
+        <div class="panel-body">
+            <form class="p-a-1" asp-action="AddSport" method="post">
+                <div asp-validation-summary="All"></div>
+                <div class="form-group">
+                    <label asp-for="Name">Sport naam:</label>
+                    <input class="form-control" asp-for="Name" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="Description">Sport beschrijving:</label>
+                    <input class="form-control" asp-for="Description" />
+                </div>
+                <div class="text-center">
+                    <button class="btn btn-lg btn-primary buttonlayout" id="buttoncustom" type="submit">
+                        Voeg toe
+                    </button>
+                    <div class="text-center spacing">
+                        <a asp-action="ListSports" class="btn btn-default">Annuleer</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

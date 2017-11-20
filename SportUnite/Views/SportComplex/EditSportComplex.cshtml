@@ -1,0 +1,41 @@
+﻿@model SportUnite.Domain.Models.SportComplex
+@{
+    Layout = "_Layout";
+}
+<form asp-action="EditSportComplex" method="post">
+    <div asp-validation-summary="All"></div>
+    <input type="hidden" asp-for="SportComplexId" />
+    <div class="form-group">
+        <label asp-for="Name">Sportcomplex naam:</label>
+        <input asp-for="Name" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Address">Sportcomplex adres:</label>
+        <textarea asp-for="Address" class="form-control"></textarea>
+    </div>
+    <div class="form-group">
+        <label asp-for="HouseNumber">Sportcomplex huisnummer:</label>
+        <textarea asp-for="HouseNumber" class="form-control"></textarea>
+    </div>
+    <div class="form-group">
+        <label asp-for="City">Sportcomplex stad:</label>
+        <textarea asp-for="City" class="form-control"></textarea>
+    </div>
+    <div class="form-group">
+        <label asp-for="PostalCode">Sportcomplex postcode:</label>
+        <textarea asp-for="PostalCode" class="form-control"></textarea>
+    </div>
+    <div class="form-group">
+        <label>Zichtbaarheid</label>
+        <select class="form-control" asp-for="Availability">
+            <option value="">Kies een optie</option>
+            <option value="true">Zichtbaar</option>
+            <option value="false">Onzichtbaar</option>
+        </select>
+    </div>
+    
+    <div class="text-center">
+        <button class="btn btn-primary" type="submit">Opslaan</button>
+        <a asp-action="ListSportComplexes" class="btn btn-default">Annuleer</a>
+    </div>
+</form>

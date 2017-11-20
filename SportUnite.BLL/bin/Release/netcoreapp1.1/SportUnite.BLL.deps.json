@@ -1,0 +1,50 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v1.1",
+    "signature": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v1.1": {
+      "sportunite.bll/1.0.0": {
+        "dependencies": {
+          "SportUnite.DAL": "1.0.0",
+          "SportUnite.Domain": "1.0.0"
+        },
+        "runtime": {
+          "SportUnite.BLL.dll": {}
+        }
+      },
+      "sportunite.dal/1.0.0": {
+        "dependencies": {
+          "SportUnite.Domain": "1.0.0"
+        },
+        "runtime": {
+          "SportUnite.DAL.dll": {}
+        }
+      },
+      "sportunite.domain/1.0.0": {
+        "runtime": {
+          "SportUnite.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "sportunite.bll/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "sportunite.dal/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "sportunite.domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

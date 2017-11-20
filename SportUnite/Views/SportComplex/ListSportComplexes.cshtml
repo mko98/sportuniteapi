@@ -1,0 +1,72 @@
+﻿@model SportUnite.WEBUI.Models.ViewModels.SportComplexFilterListViewModel
+
+@{
+    Layout = "_Layout";
+}
+
+<div>
+    <h2 class="titlelayout" style="float:left">SportComplexen</h2>
+    <a asp-action="AddSportComplex" asp-controller="Sportcomplex" class=" btn btn-success addButton pull-right">
+        <span class="glyphicon glyphicon-plus"></span>
+        <h7>Voeg sportcomplex toe</h7>
+    </a>
+@await Component.InvokeAsync("SportComplexFilter")
+
+
+</div>
+
+
+@foreach (var p in Model.SportComplexes)
+{
+    if (p == null)
+    {
+        <div class="well col-sm-4">
+            <p>
+                Er zijn geen sportcomplexen
+            </p>
+        </div>
+
+    }
+    else
+    {
+        <div class="well col-sm-12">
+            <h3>
+                <strong>@p.Name</strong>
+            </h3>
+            <a asp-action="EditSportComplex" class="pull-right btn btn-warning spacingbutton"
+               asp-route-sportcomplexid="@p.SportComplexId">
+                <span class="glyphicon glyphicon-pencil"></span>
+                <h7>Edit</h7>
+            </a>
+            <a asp-action="DetailSportComplex" class="pull-right btn btn-primary"
+               asp-route-sportcomplexid="@p.SportComplexId">
+                <span class="glyphicon glyphicon-eye-open"></span>
+                <h7>View</h7>
+            </a>
+
+
+            <div>
+                <span>@p.Address</span>
+                <span>@p.HouseNumber</span>
+                <div>@p.City</div>
+                <div>@p.PostalCode</div>
+                @if (p.Availability == true)
+                {
+                    <div>Zichtbaar: Ja</div>
+                }
+                else
+                {
+                    <div>Zichtbaar: Nee</div>
+                }
+
+
+
+            </div>
+        </div>
+
+    }
+}
+<div page-action="List" page-classes-enabled="true"
+     page-class="btn" page-class-normal="btn-default"
+     page-class-selected="btn-primary" class="btn-group pull-right">
+</div>

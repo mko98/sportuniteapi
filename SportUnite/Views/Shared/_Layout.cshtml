@@ -1,0 +1,88 @@
+﻿@inject Microsoft.ApplicationInsights.AspNetCore.JavaScriptSnippet JavaScriptSnippet
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" asp-href-include="lib/bootstrap/dist/css/*.min.css" />
+    <link rel="stylesheet" type="text/css" href="~/css/Style.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <title>@ViewData["Title"] - SportUnite</title>
+</head>
+<body>
+    <div class="row panel content border-radius" id="mainpagecontent">
+        <div id="aroundcontent">
+            <div class="col-xs-3 navigationlayout">
+                <div class="navbar navbar-inverse text-center" role="navigation">
+                    <img id="navbarLogo" src="/images/logo.png">
+                </div>
+                <a class="btn btn-block btn-default"
+                   asp-action="AdminHome"
+                   asp-controller="Home"
+                   asp-route-category="">
+                    <img class="navicon" src="~/images/homeicon.png" />
+                    <h4>Home</h4>
+                </a>
+
+                <a class="btn btn-block btn-default"
+                   asp-action="ListSports"
+                   asp-controller="Sport"
+                   asp-route-category="">
+                    <img class="navicon" src="~/images/sporticon.png" />
+                    <h4>Sport</h4>
+                </a>
+
+                <a class="btn btn-block btn-default"
+                   asp-action="ListSportAttributes"
+                   asp-controller="SportAttribute"
+                   asp-route-category="">
+                    <img class="navicon" src="~/images/attributeicon.png" />
+                    <h4>Sportattributen</h4>
+                </a>
+
+                <a class="btn btn-block btn-default"
+                   asp-action="ListSportComplexes"
+                   asp-controller="Sportcomplex"
+                   asp-route-category="">
+                    <img class="navicon" src="~/images/complexicon.png" />
+                    <h4>Sportcomplexen</h4>
+                </a>
+
+                <a class="btn btn-block btn-default"
+                   asp-action="ListSportEvents"
+                   asp-controller="SportEvent"
+                   asp-route-category="">
+                    <img class="navicon" src="~/images/eventicon.png" />
+                    <h4>Sportevenementen</h4>
+                </a>
+
+                <a class="btn btn-block btn-default"
+                   asp-action="ListSportHalls"
+                   asp-controller="SportHall"
+                   asp-route-category="">
+                    <img class="navicon" src="~/images/gymicon.png" />
+                    <h4>Sporthallen</h4>
+                </a>
+
+                <a class="btn btn-block btn-default"
+                   asp-action="ListInvoices"
+                   asp-controller="Invoice"
+                   asp-route-category="">
+                    <img class="navicon" src="~/images/invoiceicon.png" />
+                    <h4>Facturen</h4>
+                </a>
+
+                <a id="endnavbar" class="btn btn-block btn-default"
+                   asp-action="Logout"
+                   asp-controller="Account"
+                   asp-route-category="">
+                    <img class="navicon" src="~/images/logouticon.png" />
+                    <h4>Uitloggen</h4>
+                </a>
+            </div>
+            <div class="col-xs-8" id="listlayout">
+                @RenderBody()
+            </div>
+        </div>
+    </div>
+</body>
+</html> 

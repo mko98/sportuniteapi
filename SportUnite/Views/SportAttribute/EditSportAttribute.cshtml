@@ -1,0 +1,36 @@
+﻿@model SportUnite.Domain.Models.SportAttribute
+@{
+    Layout = "_Layout";
+}
+<form asp-action="EditSportAttribute" method="post">
+    <div asp-validation-summary="All"></div>
+    <input type="hidden" asp-for="SportAttributeId" />
+    <div class="form-group">
+        <label asp-for="Name">Attribuut naam:</label>
+        <input asp-for="Name" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Description">Attribuut beschrijving:</label>
+        <textarea asp-for="Description" class="form-control"></textarea>
+    </div>
+    <div class="form-group">
+        <label>Bruikbaarheid:</label>
+        <select class="form-control" asp-for="NotUsable">
+            <option value="">Kies een optie</option>
+            <option value="true">Het is niet meer bruikbaar</option>
+            <option value="false">Het is bruikbaar</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label>Zichtbaarheid</label>
+        <select class="form-control" asp-for="Availability">
+            <option value="">Kies een optie</option>
+            <option value="true">Zichtbaar</option>
+            <option value="false">Onzichtbaar</option>
+        </select>
+    </div>
+    <div class="text-center">
+        <button class="btn btn-primary" type="submit">Opslaan</button>
+        <a asp-action="ListSportAttributes" class="btn btn-default">Annuleer</a>
+    </div>
+</form>

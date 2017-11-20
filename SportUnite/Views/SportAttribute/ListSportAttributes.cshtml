@@ -1,0 +1,66 @@
+﻿@model SportUnite.WEBUI.Models.ViewModels.SportAttributesFilterListViewModel
+
+@{
+    Layout = "_Layout";
+}
+
+<div>
+    <h2 class="titlelayout" style="float:left">Sportattributen</h2>
+    <a asp-action="AddSportAttribute" asp-controller="SportAttribute" class=" btn btn-success addButton pull-right">
+        <span class="glyphicon glyphicon-plus"></span>
+        <h7>Voeg sportattribuut toe</h7>
+    </a>
+    @await Component.InvokeAsync("SportAttributeFilter")
+
+</div>
+
+
+@foreach (var p in Model.SportAttributes)
+{
+    if (p == null)
+    {
+        <div class="well col-sm-4">
+            <p>
+                Er zijn geen sport attributen
+            </p>
+        </div>
+
+    }
+    else
+    {
+        <div class="well col-sm-12">
+            <h3>
+                <strong>@p.Name</strong>
+            </h3>
+            <a asp-action="EditSportAttribute" class="pull-right btn btn-warning"
+               asp-route-sportattributeid="@p.SportAttributeId">
+                <span class="glyphicon glyphicon-pencil"></span>
+                <h7>Edit</h7>
+            </a>
+            <div>
+                <div>@p.Description</div>
+                @if (p.NotUsable == false)
+                {
+                    <div>Status: Beschikbaar</div>
+                }
+                else
+                {
+                    <div>Status: Niet beschikbaar</div>
+                }
+                @if (p.Availability == true)
+                {
+                    <div>Zichtbaar: Ja</div>
+                }
+                else
+                {
+                    <div>Zichtbaar: Nee</div>
+                }
+            </div>
+        </div>
+
+    }
+}
+<div page-action="List" page-classes-enabled="true"
+     page-class="btn" page-class-normal="btn-default"
+     page-class-selected="btn-primary" class="btn-group pull-right">
+</div>

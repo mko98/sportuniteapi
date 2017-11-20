@@ -1,0 +1,45 @@
+﻿@using SportUnite.Domain.Models
+@model SportUnite.WEBUI.Models.ViewModels.AddSportAttributeModel
+@{
+    Layout = "_Layout";
+}
+<div class="panel panel-head">
+    <div class="panel-heading text-center"><h4>Voeg een attribuut toe</h4></div>
+    <div class="panel-body">
+        <form class="p-a-1" asp-action="AddSportAttribute" method="post">
+            <div asp-validation-summary="All"></div>
+            <div class="form-group">
+                <label asp-for="SportAttribute.Name">Attribuut naam</label>
+                <input class="form-control" asp-for="SportAttribute.Name" />
+            </div>
+            <div class="form-group">
+                <label asp-for="SportAttribute.Description">Attribuut beschrijving:</label>
+                <input class="form-control" asp-for="SportAttribute.Description" />
+            </div>
+            <div class="form-group">
+                <label>Bruikbaarheid?</label>
+                <select class="form-control" asp-for="SportAttribute.NotUsable">
+                    <option value="false">Ja</option>
+                    <option value="True">Nee</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <select asp-for="SportId">
+                    <option value="">Choose an option</option>
+                    @foreach (Sport sport in @Model.Sports)
+                    {
+                        <option value=@sport.SportId>@sport.Name</option>
+                    }
+                </select>
+            </div>
+            <div class="text-center">
+                <button class="btn btn-lg btn-primary buttonlayout" id="buttoncustom" type="submit">
+                    Voeg toe
+                </button>
+                <div class="text-center spacing">
+                    <a asp-action="ListSportAttributes" class="btn btn-default">Cancel</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
